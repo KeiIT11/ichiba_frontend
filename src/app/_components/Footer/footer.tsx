@@ -1,4 +1,4 @@
-const HomeFooter = () => {
+export const HomeFooter = () => {
     return (
         <>
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
@@ -17,4 +17,3 @@ const HomeFooter = () => {
         </>
     );
 }
-export default HomeFooter;
