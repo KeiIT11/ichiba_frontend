@@ -2,7 +2,7 @@ import Head from "next/head";
 import { HomeNavBar } from "@/app/_components/Header/navbar";
 import { HomeFooter } from "@/app/_components/Footer/footer";
 
-export default function ProductSamplePage() {
+export default function LoginPage() {
     return (
         <>
             <Head>
@@ -11,7 +11,7 @@ export default function ProductSamplePage() {
             <body>
                 <HomeNavBar />
                 <main className='flex p-2'>
-                    <p>individual product page</p>
+                    <p>Login page</p>
                 </main>
                 <HomeFooter />
             </body>
