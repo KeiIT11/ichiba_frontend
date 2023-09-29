@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-export const RecommendedItemCard = () => {
+
+export const RecommendedItemCard = ({ key, personaRecommendationItem }: { key: number, personaRecommendationItem: ReccomendedItemInfo }): React.ReactNode => {
     return (
         <>
             <div className="relative h-40 w-40 shadow-md hover:shadow-lg">
