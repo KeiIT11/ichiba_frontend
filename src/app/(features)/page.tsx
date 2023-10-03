@@ -19,13 +19,6 @@ export default function Home() {
       <body className="">
         <HomeNavBar />
         <main className='px-6 py-4 space-y-3'>
-          <h2 className="text-2xl font-light pt-2">
-            Who are you?
-          </h2>
-          <p>We can recommend you good items.</p>
-          <PersonaCard />
-          <div className="flex space-x-3">
-          </div>
           <h2 className="text-2xl font-medium pt-2">Items for New life</h2>
           <RecommendedItemCardList personaRecommendationItems={newLifeRecommendationItems} />
           <h2 className="text-2xl font-medium pt-2">Daily Goods</h2>
@@ -34,7 +27,13 @@ export default function Home() {
           <h2 className="text-2xl font-medium pt-4">Influencer's recomendation</h2>
           {/* <InfluencerRecommendationCard /> */}
           <InfluencerRecommendationCardList />
+          <h2 className="text-2xl font-light pt-2">
+            Who are you?
+          </h2>
+          <p>We can recommend you good items.</p>
+          <PersonaCard />
         </main>
+
         <HomeFooter />
       </body>
     </>
