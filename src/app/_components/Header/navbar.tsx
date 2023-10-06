@@ -1,32 +1,42 @@
-import Link from 'next/link';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import logo_image from "../../../../public/RAKITEN_LOGO.webp";
+import { useRouter } from "next/navigation";
 
 export const HomeNavBar = () => {
-    return (
-        <header>
-            <div className="navbar px-10">
-                <Link href="/" className='btn btn-ghost normal-case text-xl'>
-                    Rakuten New Life
-                </Link>
+  const router = useRouter();
+  return (
+    <header>
+      <div className="navbar px-10 p-2 shadow-md ">
+        {/* <Link href="/" className="btn btn-ghost normal-case text-xl">
+          Rakuten New Life
+        </Link> */}
+        <Image
+          src={logo_image}
+          alt="Logo of Rakuten"
+          height={100}
+          width={100}
+          className="cursor-pointer"
+          onClick={() => router.push("/")}
+        />
 
-                <div className='md:px-12'></div>
+        <div className="md:px-12"></div>
 
-                <div className="form-control w-full">
-                    <input type="text" placeholder="Search" className="input input-bordered w-full" />
-                </div>
+        <div className="form-control w-full">
+          <input
+            type="text"
+            placeholder="Search"
+            className="input input-bordered w-[70%]"
+          />
+        </div>
 
-                <div className='md:px-12'></div>
+        <div className="md:px-12"></div>
 
-                <ul className="menu menu-horizontal px-1">
-                    <li>
-                        <Link href="/login">
-                            Login
-                        </Link>
-                    </li>
-                </ul>
-                <Link href="/login" className='btn'>
-                    Sign up
-                </Link>
-            </div>
-        </header>
-    )
+        <Link href="/login" className="btn">
+          Login
+        </Link>
+      </div>
+    </header>
+  );
 };

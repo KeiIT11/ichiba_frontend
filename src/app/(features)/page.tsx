@@ -3,33 +3,27 @@ import { HomeNavBar } from "@/app/_components/Header/navbar";
 import { HomeFooter } from "@/app/_components/Footer/footer";
 import { getPersonaRecommendationItems } from "../_helpers/getPersonaRecommendationItems";
 import { allPersonaRecommendationGenraList } from "../_constants/recommended_genra_list";
-import { RecommendedItemCardList } from "../_components/Elements/recommend_itemcard_list";
+
+import Hero from "../_components/Hero";
+import Products from "../_components/Trending_Product_listing/Products";
+import Newlife from "../_components/NewLife_Recommendations";
+import Influencer from "../_components/Influencers";
 
 export default function Home() {
-  const newLifeRecommendationItems = getPersonaRecommendationItems(allPersonaRecommendationGenraList.newLife);
-
   return (
     <>
       <Head>
-        <title>test</title>
+        <title>Home page</title>
       </Head>
-      <body className="">
+      <body className=" w-[117%] sm:w-[100vw] ">
         <HomeNavBar />
-        <main className='px-6 py-4 space-y-3'>
-          <h2 className="text-2xl font-light pt-2">
-            We can recommend you good items.
-          </h2>
-          <p>who are you?</p>
-          <p>New grad?   Get Married? </p>
-          <h2 className="text-2xl font-light pt-2">Items for New life</h2>
-          <RecommendedItemCardList personaRecommendationItems={newLifeRecommendationItems} />
+        <Hero />
+        <Products />
+        <Newlife />
+        <Influencer />
 
-          <h2 className="text-2xl font-light pt-4">Influencer's recomendation</h2>
-          <RecommendedItemCardList personaRecommendationItems={newLifeRecommendationItems} />
-
-        </main>
         <HomeFooter />
       </body>
     </>
-  )
+  );
 }
