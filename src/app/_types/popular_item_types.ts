@@ -13,5 +13,5 @@ export interface Product {
   productName: string;
   mediumImageUrl: string;
   minPrice: number;
-  Product:string;
+  productId: string;
 }
