@@ -20,20 +20,21 @@ export const CategoryCard = (): React.ReactNode => {
                 </div>
 
                 <p className="text-xl font-medium font-serif">wedding dress</p>
+                {/* <div className="bg-green-500 mask mask-star mask-half-1"></div> */}
                 <div className="rating rating-md rating-half">
                     {/* <input type="radio" name="rating-10" className="rating-hidden" /> */}
-                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star mask-half-1" disabled />
-                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star mask-half-2" disabled />
-                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-1" checked />
-                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-2" disabled />
-                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-1" disabled />
-                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-2" disabled />
-                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-1" disabled />
-                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-2" disabled />
-                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-1" disabled />
-                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-2" />
-                    <p>(1990)</p>
+                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star mask-half-1" />
+                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star mask-half-2" />
+                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star mask-half-1" />
+                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star mask-half-2" />
+                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star mask-half-1" />
+                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star mask-half-2" />
+                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star mask-half-1" />
+                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star mask-half-2" />
+                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star mask-half-1" />
+                    <input type="radio" name="rating-10" className="bg-green-500 mask mask-star mask-half-2" />
                 </div>
+                <p> (1990)</p>
                 <p>1190円</p>
                 <button className="btn btn-outline">Add to Cart</button>
 

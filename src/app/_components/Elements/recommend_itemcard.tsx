@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const RecommendedItemCard = ({ key, personaRecommendationItem }: { key: number, personaRecommendationItem: ReccomendedItemInfo }): React.ReactNode => {
+export const RecommendedItemCard = ({ personaRecommendationItem }: { personaRecommendationItem: ReccomendedItemInfo }) => {
     return (
         <>
             <div className="relative h-60 w-60 bg-white border">
@@ -14,7 +14,7 @@ export const RecommendedItemCard = ({ key, personaRecommendationItem }: { key: n
                         // height={150}
                         className=""
                         // className="p-4"
-                        layout="fill"
+                        fill
                     // objectFit="contain"
                     ></Image>
                 </div>

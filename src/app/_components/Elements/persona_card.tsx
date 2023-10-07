@@ -14,7 +14,7 @@ export const PersonaCard = (): React.ReactNode => {
                         // height={150}
                         className=""
                         // className="p-4"
-                        layout="fill"
+                        fill
                     // objectFit="contain"
                     ></Image>
                 </div>
