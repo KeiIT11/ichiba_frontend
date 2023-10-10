@@ -8,6 +8,7 @@ import Hero from "../_components/Hero";
 import Products from "../_components/Trending_Product_listing/Products";
 import Newlife from "../_components/NewLife_Recommendations";
 import Influencer from "../_components/Influencers";
+import { PersonaCardList } from "../_components/Elements/persona_cardlist";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
         <Products />
         <Newlife />
         <Influencer />
-
+        <PersonaCardList />
         <HomeFooter />
       </body>
     </>
