@@ -8,6 +8,8 @@ interface Cardprops {
   card_title: string;
   card_price: number;
   product_id: string;
+  review_average?: string;
+  category_name?: string;
 }
 
 const Card: React.FC<Cardprops> = ({
@@ -15,6 +17,8 @@ const Card: React.FC<Cardprops> = ({
   product_id,
   card_price,
   card_title,
+  review_average,
+  category_name,
 }) => {
   const formatter = new Intl.NumberFormat("ja-JP", {
     style: "currency",
@@ -36,6 +40,14 @@ const Card: React.FC<Cardprops> = ({
           />
         </div>
         <div className="font-semibold text-lg ">{card_title}</div>
+        <div className="font-semibold text-md">
+          {review_average && <>Rating : {review_average}</>}
+          {category_name && (
+            <div className="w-[100%] h-[20%] text-white bg-red-500 flex items-center text-center font-bold rounded-md justify-center border-1">
+              {category_name}
+            </div>
+          )}
+        </div>
         <div className="flex flex-row items-center gap-1">
           <div className="font-semibold text-red-700">
             {formatter.format(card_price)}

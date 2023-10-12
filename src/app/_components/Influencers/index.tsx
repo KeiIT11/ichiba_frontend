@@ -14,6 +14,7 @@ const Influencer = async () => {
             image_url={data.image_url}
             key={key}
             title_name={data.name}
+            id={data.id}
           />
         ))}
       </div>

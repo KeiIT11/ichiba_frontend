@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import logo_image from "../../../../public/RAKITEN_LOGO.webp";
 import { useRouter } from "next/navigation";
+import useLoginModal from "@/app/hooks/useLoginModal";
 
 export const HomeNavBar = () => {
   const router = useRouter();
+  const loginmodal = useLoginModal();
   return (
     <header>
       <div className="navbar px-10 p-2 shadow-md ">
@@ -31,11 +32,11 @@ export const HomeNavBar = () => {
           />
         </div>
 
-        <div className="md:px-12"></div>
-
-        <Link href="/login" className="btn">
-          Login
-        </Link>
+        <div className="navbar-end">
+          <a className="btn" onClick={() => loginmodal.onOpen()}>
+            Login
+          </a>
+        </div>
       </div>
     </header>
   );

@@ -3,6 +3,7 @@ import { fetachpopularitems } from "@/app/_apis/fetchTopSelling";
 
 const Products = async () => {
   const products = await fetachpopularitems();
+
   return (
     <div className="max-w-[100vw] min-w-[30vh] p-2 m-2 flex flex-col ">
       <div className="p-4 font-bold text-2xl flex items-center ">
@@ -14,13 +15,14 @@ const Products = async () => {
       >
         {products.map((product) => (
           <Card
-            card_title={product.itemName}
+            card_title={product.genreName}
             image_src={product.imageUrl.replace("_ex=128x128", "_ex=1024x1024")}
             card_price={
               typeof product.itemPrice === "string"
                 ? parseInt(product.itemPrice)
                 : product.itemPrice
             }
+            review_average={product.reviewAverage}
             key={product.itemCode}
           />
         ))}

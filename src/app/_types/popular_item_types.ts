@@ -7,11 +7,12 @@ export interface Popular_item {
   shopCode: string;
   imageUrl: string;
   genreName: string;
+  reviewAverage: string;
 }
 
 export interface Product {
   productName: string;
   mediumImageUrl: string;
   minPrice: number;
-  Product:string;
+  Product: string;
 }
