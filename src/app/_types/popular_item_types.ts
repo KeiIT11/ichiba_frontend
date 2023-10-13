@@ -8,6 +8,7 @@ export interface Popular_item {
   imageUrl: string;
   genreName: string;
   reviewAverage: string;
+  itemUrl:string;
 }
 
 export interface Product {

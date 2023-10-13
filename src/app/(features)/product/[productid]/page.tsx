@@ -4,6 +4,8 @@ import { HomeFooter } from "@/app/_components/Footer/footer";
 import Image from "next/image";
 import { fetchProductData } from "@/app/_apis/fetchparticularproduct";
 
+import Listingbuy from "@/app/_components/Listing/Listingbuy";
+
 interface IParams {
   productid: string;
 }
@@ -28,6 +30,8 @@ export default async function ProductSamplePage({
   const itemCount = product.itemCount;
   const reviewAverage = product.reviewAverage;
   const productUrlPC = product.productUrlPC;
+  const makerName = product.makerName;
+  const productId = product.productId;
   return (
     <>
       <Head>
@@ -64,6 +68,13 @@ export default async function ProductSamplePage({
                   <div className="text-lg font-light text-[#444444]">
                     {productCaption}
                   </div>
+                </div>
+                <div className="order-first mb-10 md:order-last md:col-span-3">
+                  <Listingbuy
+                    productId={productId}
+                    detailurl={productUrlPC}
+                    makerName={makerName}
+                  />
                 </div>
               </div>
             </div>

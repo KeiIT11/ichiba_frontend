@@ -4,6 +4,18 @@ import axios, { AxiosResponse } from "axios";
 interface IParams {
   productid: string;
 }
+export interface Product {
+  genreName: string;
+  productName: string;
+  productCaption: string;
+  mediumImageUrl: string;
+  averagePrice: number;
+  itemCount: number;
+  reviewAverage: number;
+  productUrlPC: string;
+  makerName: string;
+  productId: string;
+}
 interface ApiResponse {
   GenreInformation: {
     children: any[];
@@ -20,6 +32,8 @@ interface ApiResponse {
       itemCount: number;
       reviewAverage: number;
       productUrlPC: string;
+      makerName: string;
+      productId: string;
     };
   }[];
 }

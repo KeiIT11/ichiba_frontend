@@ -8,6 +8,7 @@ import Hero from "../_components/Hero";
 import Products from "../_components/Trending_Product_listing/Products";
 import Newlife from "../_components/NewLife_Recommendations";
 import Influencer from "../_components/Influencers";
+import Persona from "../_components/Persona";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <body className=" w-[117%] sm:w-[100vw] ">
         <HomeNavBar />
         <Hero />
+        <Persona />
         <Products />
         <Newlife />
         <Influencer />

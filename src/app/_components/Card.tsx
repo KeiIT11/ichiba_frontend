@@ -10,6 +10,7 @@ interface Cardprops {
   product_id: string;
   review_average?: string;
   category_name?: string;
+  item_url?: string;
 }
 
 const Card: React.FC<Cardprops> = ({
@@ -19,15 +20,25 @@ const Card: React.FC<Cardprops> = ({
   card_title,
   review_average,
   category_name,
+  item_url,
 }) => {
   const formatter = new Intl.NumberFormat("ja-JP", {
     style: "currency",
     currency: "JPY",
   });
   const router = useRouter();
+  const handleclick = (product_id: string) => {
+    if (product_id === undefined || product_id === "") {
+      window.open(item_url, "_blank");
+      return;
+    } else {
+      router.push(`/product/${product_id}`);
+      return;
+    }
+  };
   return (
     <div
-      onClick={() => router.push(`/product/${product_id}`)}
+      onClick={() => handleclick(product_id)}
       className="col-span-1 cursor-pointer group"
     >
       <div className="flex flex-col gap-2 w-full shadow-lg rounded-lg p-2">

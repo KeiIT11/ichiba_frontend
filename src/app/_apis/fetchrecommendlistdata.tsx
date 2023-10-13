@@ -6,7 +6,7 @@ export const fetchrecommendationdata = async (
 ): Promise<RecommendationApiResponse | undefined> => {
   try {
     const response: AxiosResponse<RecommendationApiResponse> = await axios.get(
-      `http://127.0.0.1:8000/products/recommended-list/${id}/`
+      `https://web-production-4593.up.railway.app/products/recommended-list/${id}/`
     );
     return response.data;
   } catch (error) {

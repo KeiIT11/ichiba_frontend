@@ -3,9 +3,11 @@ import Image from "next/image";
 import logo_image from "../../../../public/RAKITEN_LOGO.webp";
 import { useRouter } from "next/navigation";
 import useLoginModal from "@/app/hooks/useLoginModal";
+import { useCartStore } from "@/app/hooks/cartfunction";
 
 export const HomeNavBar = () => {
   const router = useRouter();
+  const cartfunction = useCartStore();
   const loginmodal = useLoginModal();
   return (
     <header>
@@ -31,36 +33,12 @@ export const HomeNavBar = () => {
             className="input input-bordered w-[70%]"
           />
         </div>
+        {cartfunction.cart.length !== 0 && (
+          <a className="btn" onClick={() => router.push("/cart")}>
+            View Cart
+          </a>
+        )}
         <div className="navbar-end">
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn ">
-              Recommmendation
-            </label>
-            <ul
-              tabIndex={0}
-              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a onClick={() => router.push(`/recommendations/1`)}>
-                  New Grads
-                </a>
-              </li>
-              <li>
-                <a onClick={() => router.push(`/recommendations/2`)}>
-                  Relocators
-                </a>
-              </li>
-              <li>
-                <a onClick={() => router.push(`/recommendations/3`)}>Married</a>
-              </li>
-              <li>
-                <a onClick={() => router.push(`/recommendations/4`)}>
-                  Foreigners
-                </a>
-              </li>
-            </ul>
-          </div>
-
           <a className="btn" onClick={() => loginmodal.onOpen()}>
             Login
           </a>
