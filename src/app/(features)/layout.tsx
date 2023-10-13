@@ -1,9 +1,6 @@
 import "@/app/_styles/globals.css";
 import type { Metadata } from "next";
-import { Inter, Baloo_Bhai_2 } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-const baloo_bhai = Baloo_Bhai_2({ subsets: ["latin"] });
+import { noto_sans_jp } from "@/app/_utils/fonts"
 
 export const metadata: Metadata = {
   title: "Rakuten new life",
@@ -16,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" className={baloo_bhai.className}>
+    <html lang="ja" className={noto_sans_jp.className}>
       {children}
     </html>
   );

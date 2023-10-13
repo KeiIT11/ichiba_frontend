@@ -1,15 +1,16 @@
+import { montserrat } from "@/app/_utils/fonts";
 import Card from "../Card";
 import { fetachpopularitems } from "@/app/_apis/fetchTopSelling";
 
 const Products = async () => {
   const products = await fetachpopularitems();
   return (
-    <div className="max-w-[100vw] min-w-[30vh] p-2 m-2 flex flex-col ">
+    <div className={`max-w-[100vw] min-w-[30vh] p-2 m-2 flex flex-col ${montserrat.className}`}>
       <div className="p-4 font-bold text-2xl flex items-center ">
         Trending Products
       </div>
       <div
-        className="grid 
+        className="grid
      grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2  "
       >
         {products.map((product) => (

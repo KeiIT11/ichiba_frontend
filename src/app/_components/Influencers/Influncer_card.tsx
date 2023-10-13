@@ -11,7 +11,8 @@ const Influncer_card: React.FC<Influencer_card_props> = ({
   title_name,
 }) => {
   return (
-    <div className="min-h-[100px] p-4 shadow-lg rounded-lg   flex items-center justify-start gap-4">
+    // <div className="flex flex-col gap-2 max-w-[100vw] min-h-[40vh] shadow-md m-2 p-2 px-32">
+    <div className="min-h-[100px] p-4 shadow-lg rounded-lg flex items-center justify-start gap-4">
       <div className="avatar">
         <div className="w-24 rounded-full">
           <Image alt="Influencer image" src={image_url} width={96} height={80} />

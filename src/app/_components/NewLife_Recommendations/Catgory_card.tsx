@@ -1,4 +1,5 @@
 "use client";
+import { montserrat } from "@/app/_utils/fonts";
 import { useRouter } from "next/navigation";
 
 interface Categorycardprops {
@@ -13,7 +14,7 @@ const Catgory_card: React.FC<Categorycardprops> = ({
   const router = useRouter();
   return (
     <>
-      <span className="text-xl font-semibold">{card_title}</span>
+      <span className={`text-xl font-semibold ${montserrat.className}`}>{card_title}</span>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 ">
         {card_items.map((card, key) => (
           <div
